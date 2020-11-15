@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <!-- <div class="row">
+        <div class="col s12">
+            <h1><b>Our Products</b></h1>
+        </div>
+    </div> -->
+    <div class="row center">
+        <div class="col s4 offset-s4">
+            <h3>Duckies</h3>
+            <p class="light">Choose from all different kinds of duckies. We sell
+                duckies in bulk,
+                whether
+                by the box full, by the dozen, by the pallet which includes 20 boxes, and by the truck
+                load which includes 20 pallets (that's a lot of ducks)!</p>
+        </div>
+    </div>
+    <!-- Products row with images -->
+    <div class="row">
+        <div class="col s3">
+            <i class="fas fa-box deep-orange-text text-darken-1"></i>
+            <h5>Box of Duckies</h5>
+            <p class="light">Individual boxes of duckies. If you only need a few at a time, this is what
+                you're looking for! Individual boxes are only sold in yellow color. Please make sure that this is what
+                you want prior to ordering.</p>
+        </div>
+        <div class="col s3">
+            <i class="fas fa-boxes deep-orange-text text-darken-1"></i>
+            <h5>Dozen of Duckies</h5>
+            <p class="light">Exactly 12 boxes of duckies. No more, no less. For those that need a lot of
+                duckies but not <em>too</em> many. Discounts are available if ordering a dozen over individual boxes.
+                Different color options are also available.
+            </p>
+
+        </div>
+        <div class="col s3">
+            <i class="fas fa-pallet deep-orange-text text-darken-1"></i>
+            <h5>Pallet of Duckies</h5>
+            <p class="light">
+                Need a few more than just a few boxes or a dozen? Order a pallet of duckies! One pallet contains 20
+                boxes of duckies. Different color options are also available.
+            </p>
+
+        </div>
+        <div class="col s3">
+            <i class="fas fa-truck-loading deep-orange-text text-darken-1"></i>
+            <h5>Truck Load of Duckies</h5>
+            <p class="light">
+                If you are in serious need of some duckies, don't worry! Rubber Ducky Inc has you covered with our
+                biggest order we have, a TRUCKLOAD! Different color options are also available. However, we cannot mix
+                and match ducky colors with this type of order.
+            </p>
+        </div>
+    </div>
+    <!-- Buttons Row -->
+    <div class="row buttons-row">
+        <div class="col s3"> <a class="waves-effect waves-light btn deep-orange darken-1"
+                href="{{ url_for('product', product_id=1) }}"><i class="material-icons right">chevron_right</i>Learn
+                More</a>
+        </div>
+        <div class="col s3"> <a class="waves-effect waves-light btn deep-orange darken-1"
+                href="{{ url_for('product', product_id=2) }}"><i class="material-icons right">chevron_right</i>Learn
+                More</a>
+        </div>
+        <div class="col s3"> <a class="waves-effect waves-light btn deep-orange darken-1"
+                href="{{ url_for('product', product_id=3) }}"><i class="material-icons right">chevron_right</i>Learn
+                More</a>
+        </div>
+        <div class="col s3"> <a class="waves-effect waves-light btn deep-orange darken-1"
+                href="{{ url_for('product', product_id=4) }}"><i class="material-icons right">chevron_right</i>Learn
+                More</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

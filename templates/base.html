@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% if title %}
+    <title>{{ title }} | Rubber Ducky Inc.</title>
+    {% else %}
+    <title>Welcome to Ducky Inc.</title>
+    {% endif %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/materialize.min.css')}}" type="text/css"
+        media="screen,projection">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"
+        media="screen,projection">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/all.css')}}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='images/duckyfav.ico')}}">
+
+    <!-- Material Icons -->
+    <style>
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: "{{ url_for('static', filename='fonts/MaterialIcons-Regular.eot') }}"format('eot');
+            /* For IE6-8 */
+            src: local('Material Icons'),
+            local('MaterialIcons-Regular'),
+            url("{{ url_for('static', filename='fonts/MaterialIcons-Regular.woff2') }}") format('woff2'),
+            url("{{ url_for('static', filename='fonts/MaterialIcons-Regular.woff') }}") format('woff'),
+            url("{{ url_for('static', filename='fonts/MaterialIcons-Regular.ttf') }}") format('truetype');
+        }
+    </style>
+    <!-- End Head -->
+</head>
+
+<body>
+    <nav class="yellow lighten-2" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo grey-custom">
+                <img src="{{ url_for('static', filename='images/RubberDuckyInc-250x55.png') }}" class="responsive-img">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('index') }}" class="nav-item center-align"><b>Home</b></a>
+                </li>
+                <li><a href="{{ url_for('products') }}" class="nav-item center-align"><b>Products</b></a>
+                </li>
+                <li><a href="{{ url_for('contact') }}" class="nav-item center-align"><b>Contact</b></a></li>
+                <li><a href="{{ url_for('login')}}" class="nav-item center-align"><b>Login</b></a>
+                </li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('products') }}">Products</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('login')}}">Login</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="page-footer yellow lighten-2 grey-custom z-depth-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="grey-custom"><b>Rubber Ducky Inc.</b></h5>
+                    <p class="grey-custom">555 Woodlawn Ave <br>
+                        Woodlawn, MD 21043 <br>
+                        <a href="#" class="grey-custom">websupport@rubberduckyinc.org</a>
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12 grey-custom">
+                    <ul>
+                        <li><a class="grey-custom" href="#">Privacy Policy</a></li>
+                        <li><a class="grey-custom" href="#">Terms of Use</a></li>
+                        <li><a class="grey-custom" href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span class="black-text">© 2020 Rubber Ducky Inc.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{url_for('static', filename='js/jquery.js')}}"></script>
+    <script src="{{url_for('static', filename='js/materialize.js')}}"></script>
+    <script src="{{url_for('static', filename='js/init.js')}}"></script>
+
+</body>
+
+</html>

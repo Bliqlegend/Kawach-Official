@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <h2 class="header col s12 contact-header center">Admin Login</h2>
+        </div>
+        <div class="row">
+
+            <form class="col s4 offset-s4" action="#">
+                <div class="row">
+                    <span class="light col s12">Enter your login information</span>
+                    <div class="input-field col s12">
+
+                        <input id="username" type="text" class="validate" required>
+                        <label for="Username">Username</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate" required>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light col s12 deep-orange darken-1" type="submit"
+                    name="action">Login
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

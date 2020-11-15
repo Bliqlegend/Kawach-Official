@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <h2 class="header col s12 contact-header">Contact Us</h2>
+        </div>
+        <div class="row">
+            <form class="col s12" action="{{ url_for('contact') }}" , method="POST">
+                {% for message in get_flashed_messages() %}
+                <div class="row">
+                    <div class="flash col s5 green z-depth-1 scale-transition">
+                        <p class="light">{{ message }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="first_name" type="text" class="validate" required>
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate" required>
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="company_name" type="text" class="validate" required>
+                        <label for="company_name">Company Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="email" type="email" class="validate" required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="phone_number" type="tel" class="validate" required>
+                        <label for="phone_number">Phone Number</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="reason" class="validate" required>
+                            <option value="" selected>Choose your option</option>
+                            <option value="sales">Sales</option>
+                            <option value="supply_chain">Supply Chain Services</option>
+                            <option value="vendor">Vendor, Supplier, or Accounts Payable</option>
+                            <option value="new_account">New Customer Account</option>
+                            <option value="technical_support">Technical Support</option>
+                            <option value="problem">Problem with Order</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="reason">Reason for Contact</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="message" class="materialize-textarea" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

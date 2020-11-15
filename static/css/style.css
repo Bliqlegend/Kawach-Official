@@ -1,0 +1,141 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+.copyright {
+  color: #444;
+}
+
+.nav-item {
+  margin-left: 3.5rem;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #444;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.42);
+  color: rgba(255, 255, 255, .9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.grey-custom {
+  color: #444 !important;
+}
+
+/* .page-footer {
+  background: hsla(50, 100%, 66%, 1) !important;
+
+  background: linear-gradient(hsla(50, 100%, 66%, 1) 0%, hsla(47, 100%, 50%, 1) 100%) !important;
+
+  background: -moz-linear-gradient(hsla(50, 100%, 66%, 1) 0%, hsla(47, 100%, 50%, 1) 100%) !important;
+
+  background: -webkit-linear-gradient(hsla(50, 100%, 66%, 1) 0%, hsla(47, 100%, 50%, 1) 100%) !important;
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFE254", endColorstr="#FEC900", GradientType=1);
+} */
+
+.flash {
+  border-radius: 3px;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#search {
+  height: 100%;
+}
+
+.fa-box,
+.fa-boxes,
+.fa-pallet,
+.fa-truck-loading {
+  font-size: 3em;
+}
+
+.fa-circle {
+  font-size: 2em;
+  margin-right: 20px;
+}
