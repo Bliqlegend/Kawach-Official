@@ -3,9 +3,9 @@
 
 <head>
     {% if title %}
-    <title>{{ title }} | Rubber Ducky Inc.</title>
+    <title>{{ title }} | Kawach Ltd.</title>
     {% else %}
-    <title>Welcome to Ducky Inc.</title>
+    <title>Welcome to Kawach Ltd.</title>
     {% endif %}
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/all.css')}}">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{url_for('static', filename='images/duckyfav.ico')}}">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='images/logo.png')}}">
 
     <!-- Material Icons -->
     <style>
@@ -42,10 +42,10 @@
 </head>
 
 <body>
-    <nav class="yellow lighten-2" role="navigation">
+    <nav class="green dark-1" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="/" class="brand-logo grey-custom">
-                <img src="{{ url_for('static', filename='images/RubberDuckyInc-250x55.png') }}" class="responsive-img">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" class="responsive-img">
             </a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('index') }}" class="nav-item center-align"><b>Home</b></a>
@@ -53,7 +53,7 @@
                 <li><a href="{{ url_for('products') }}" class="nav-item center-align"><b>Products</b></a>
                 </li>
                 <li><a href="{{ url_for('contact') }}" class="nav-item center-align"><b>Contact</b></a></li>
-                <li><a href="{{ url_for('login')}}" class="nav-item center-align"><b>Login</b></a>
+                <!-- <li><a href="{{ url_for('login')}}" class="nav-item center-align"><b>Login</b></a> -->
                 </li>
             </ul>
 
@@ -61,7 +61,7 @@
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('products') }}">Products</a></li>
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                <li><a href="{{ url_for('login')}}">Login</a></li>
+                <!-- <li><a href="{{ url_for('login')}}">Login</a></li> -->
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
@@ -69,14 +69,14 @@
     <main>
         {% block content %}{% endblock %}
     </main>
-    <footer class="page-footer yellow lighten-2 grey-custom z-depth-1">
+    <footer class="page-footer green dark-1 grey-custom z-depth-1">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="grey-custom"><b>Rubber Ducky Inc.</b></h5>
-                    <p class="grey-custom">555 Woodlawn Ave <br>
-                        Woodlawn, MD 21043 <br>
-                        <a href="#" class="grey-custom">websupport@rubberduckyinc.org</a>
+                    <h5 class="grey-custom"><b>Kawach Ltd.</b></h5>
+                    <p class="grey-custom">Plot 30,DLF Park <br>
+                        Gurgaon - 110077 , India <br>
+                        <a href="#" class="grey-custom">sarveshkumar2006@gmail.com</a>
                     </p>
                 </div>
                 <div class="col l4 offset-l2 s12 grey-custom">
@@ -90,7 +90,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                <span class="black-text">© 2020 Rubber Ducky Inc.</span>
+                <span class="black-text">© 2020 Kawach Ltd.</span>
             </div>
         </div>
     </footer>
