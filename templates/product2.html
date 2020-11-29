@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <h1 class="header center white-text"><strong>Ajjwain</strong></h1>
+      <div class="row center">
+        <h5 class="header col s12 dark white-text">Non-irradiated and certified organic, grown without the use of synthetic pesticides and fertilisers. Free of genetically modified organisms.
+            Contains no fillers, additives or preservatives.
+            Suitable For Vegans
+        </h5>
+      </div>
+      <br><br>
+    </div>
+  </div>
+  <div class="parallax"><img src="{{url_for('static', filename='images/ajjwain_rest.jpg')}}">
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center"><i class="material-icons deep-orange-text text-darken-1">favorite</i></h2>
+          <h5 class="center">Trusted</h5>
+
+          <p class="dark">Non-irradiated and certified organic, grown without the use of synthetic pesticides and fertilisers. Free of genetically modified organisms.
+            Contains no fillers, additives or preservatives.
+             </p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center"><i class="material-icons deep-orange-text text-darken-1">grade</i></h2>
+          <h5 class="center">Highly rated</h5>
+
+          <p class="dark">Non-irradiated and certified organic, grown without the use of synthetic pesticides and fertilisers. Free of genetically modified organisms.
+            Contains no fillers, additives or preservatives.</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center"><i class="material-icons deep-orange-text text-darken-1">sentiment_very_satisfied</i></h2>
+          <h5 class="center">Highest satisfaction</h5>
+
+          <p class="dark"> Non-irradiated and certified organic, grown without the use of synthetic pesticides and fertilisers. Free of genetically modified organisms.
+            Contains no fillers, additives or preservatives.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

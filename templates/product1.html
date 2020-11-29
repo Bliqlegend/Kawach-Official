@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <h1 class="header center white-text"><strong>Elaichi</strong></h1>
+      <div class="row center">
+        <h5 class="header col s12 dark white-text">The <strong>Most Authentic </strong>Elaichi
+        </h5>
+      </div>
+      <br><br>
+    </div>
+  </div>
+  <div class="parallax"><img src="{{url_for('static', filename='images/elichi01.jpg')}}">
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center"><i class="material-icons deep-orange-text text-darken-1">favorite</i></h2>
+          <h5 class="center">Trusted</h5>
+
+          <p class="dark">Handpicked cardamom, choicest saffron, coated in pure Silver leaves is what makes Kawach Elaichi a discernable after mint. A rich blend of freshness that dedarks the palate with its aromatic flavour, Kawach Elaichi make a dedarkful companion at all times. </p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center"><i class="material-icons deep-orange-text text-darken-1">grade</i></h2>
+          <h5 class="center">Highly rated</h5>
+
+          <p class="dark">Known for its refined taste, pleasing aroma and lasting flavour, Kawach Elaichi has set new standards for others to emulate. </p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center"><i class="material-icons deep-orange-text text-darken-1">sentiment_very_satisfied</i></h2>
+          <h5 class="center">Highest satisfaction</h5>
+
+          <p class="dark"> With green cardamom seeds handpicked from the finest orchards across India, Kawach Elaichi’s special blend of flavours and spices, enhanced with a pure silver coating, enjoys patronage from consumers across the world. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -42,16 +42,22 @@ def products():
 
 # Product Route
 # SQL Query performed here
-@app.route('/products/<product_id>', methods=['GET'])
-def product(product_id):
-    with eng.connect() as con:
-        # Executes the SQL Query
-        # This should be the vulnerable portion of the application
-        rs = con.execute(f"SELECT * FROM product WHERE id={product_id}")
-        product_selected = rs.fetchone()  # Returns the entire row in a list
-    return render_template('product.html', title=product_selected[1], result=product_selected)
+@app.route('/products/1', methods=['GET'])
+def product1():
+    return render_template('product1.html', title='Elaichi')
 
+@app.route('/products/2', methods=['GET'])
+def product2():
+    return render_template('product2.html', title='Ajjwain')
 
+@app.route('/products/3', methods=['GET'])
+def product3():
+    return render_template('product3.html', title='Jeera')
+
+@app.route('/products/4', methods=['GET'])
+def product4():
+    return render_template('product4.html', title='Heeng')
+    
 # Login
 @app.route('/login', methods=['GET'])
 def login():
